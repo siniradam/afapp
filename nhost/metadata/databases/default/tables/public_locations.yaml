@@ -1,3 +1,37 @@
 table:
   name: locations
   schema: public
+array_relationships:
+  - name: events
+    using:
+      foreign_key_constraint_on:
+        column: hash
+        table:
+          name: location_events
+          schema: public
+  - name: people
+    using:
+      foreign_key_constraint_on:
+        column: hash
+        table:
+          name: people
+          schema: public
+  - name: requests
+    using:
+      foreign_key_constraint_on:
+        column: hash
+        table:
+          name: requests
+          schema: public
+select_permissions:
+  - role: public
+    permission:
+      columns:
+        - cityId
+        - id
+        - city
+        - district
+        - hash
+        - neighborhood
+      filter: {}
+      limit: 30

@@ -1,3 +1,24 @@
 table:
   name: requests
   schema: public
+object_relationships:
+  - name: location
+    using:
+      foreign_key_constraint_on: hash
+select_permissions:
+  - role: public
+    permission:
+      columns:
+        - cityId
+        - id
+        - building
+        - buildingNo
+        - description
+        - floor
+        - hash
+        - mainStreet
+        - street
+        - urls
+        - created_at
+        - updated_at
+      filter: {}

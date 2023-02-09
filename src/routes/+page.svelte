@@ -82,5 +82,15 @@
       {/each}
     </div>
   </div>
-  <div class="p-4 bg-white rounded-r-lg w-80">RIGHT</div>
+  <div class="p-4 bg-white rounded-r-lg w-80">
+    <div class="buttons">
+      <button> Yardima Ihtiyacim Var </button>
+      <button> Ihtiyaclarim Var </button>
+    </div>
+
+    <div class="buttons">
+      <button> Kisi Bildirimi Yap </button>
+      <button> Ihtiyaclarim Var </button>
+    </div>
+  </div>
 </div>

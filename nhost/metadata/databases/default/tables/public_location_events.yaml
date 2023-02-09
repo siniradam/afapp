@@ -1,3 +1,24 @@
 table:
   name: location_events
   schema: public
+object_relationships:
+  - name: event
+    using:
+      foreign_key_constraint_on: event_id
+  - name: location
+    using:
+      foreign_key_constraint_on: hash
+select_permissions:
+  - role: public
+    permission:
+      columns:
+        - verified
+        - event_id
+        - id
+        - hash
+        - message
+        - status
+        - created_at
+        - updated_at
+      filter: {}
+      limit: 20
