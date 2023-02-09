@@ -1,0 +1,3 @@
+table:
+  name: event_types
+  schema: public
